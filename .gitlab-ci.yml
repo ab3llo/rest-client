@@ -12,4 +12,4 @@ job A:
     - 'dotnet restore'
     - 'dotnet build /p:Configuration=Release;Platform="Any CPU"'
     - 'dotnet pack RestClient/RestClient.csproj'
-    - 'dotnet nuget push RestClient/bin/Debug/*.nupkg -k 1dfa2e99-0b72-420b-b3c7-4265d63cc6fc -s https://www.myget.org/F/dev-api-utilities/api/v2/package'
+    - 'dotnet nuget push RestClient/bin/Debug/*.nupkg -k 1dfa2e99-0b72-420b-b3c7-4265d63cc6fc -s https://www.myget.org/F/restclient/api/v2/package'
