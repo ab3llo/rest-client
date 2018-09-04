@@ -53,6 +53,14 @@ namespace Rest.Client
 			return await SendAsync<T>(request);
 		}
 
+        public async Task<ApiResponse<T>> DeleteAsyncWithBody<T>(Uri uri,object body, Dictionary<string, string> headers = null)
+        {
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Delete, uri);
+            AddHeadersToRequest(headers, request);
+
+            return await SendAsync<T>(request, body);
+        }
+
 		public async Task<ApiResponse<T>> SendAsync<T>(HttpRequestMessage request, object body = null)
 		{
 			if(request==null)
