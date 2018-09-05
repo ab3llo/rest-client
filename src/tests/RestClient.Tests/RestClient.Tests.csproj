@@ -16,4 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\RestClient\Rest.Client.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="DockerJarApi\.DS_Store" />
+  </ItemGroup>
 </Project>
